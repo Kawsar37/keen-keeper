@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.p-btn {
+  background-color: #244d3f;
+  color: white;
+}
