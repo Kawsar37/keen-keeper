@@ -1,19 +1,16 @@
-import { Suspense } from "react";
+"use client";
+import { use } from "react";
 import Friends from "./components/Friends";
 import Loading from "./components/Loading";
-
-const fetchData = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  return res.json();
-};
-
-const friendsPromise = fetchData();
+import { FriendsContext } from "./context/ContextProvider";
 
 export default function Home() {
+  const { friendsData, loading } = use(FriendsContext);
+  console.log(friendsData);
   return (
     <div className="bg-[#F8FAFC]">
       <div className="container mx-auto px-5 md:px-15 lg:px-30 ">
-        <div className="mt-20">
+        <div className="py-10 md:py-20">
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold">
               Friends to keep close in your life
@@ -46,9 +43,8 @@ export default function Home() {
 
           <div className="border-b border-gray-500/20 my-10"></div>
 
-          <Suspense fallback={<Loading />}>
-            <Friends friendsPromise={friendsPromise} />
-          </Suspense>
+          {loading && <Loading />}
+          <Friends friendsData={friendsData} />
         </div>
       </div>
     </div>

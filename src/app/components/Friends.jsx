@@ -2,8 +2,7 @@
 import React, { use } from "react";
 import FriendCard from "./ui/FriendCard";
 
-export default function Friends({ friendsPromise }) {
-  const friendsData = use(friendsPromise);
+export default function Friends({ friendsData }) {
   return (
     <div>
       <div>
