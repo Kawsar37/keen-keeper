@@ -1,6 +1,7 @@
 "use client";
 import Loading from "@/app/components/Loading";
 import { FriendsContext } from "@/app/context/ContextProvider";
+import NotFoundPage from "@/app/not-found";
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
@@ -23,6 +24,10 @@ export default function FriendDetailsPage({ params }) {
 
   const { friendsData, loading, timelineData, setTimelineData } =
     useContext(FriendsContext);
+
+  if (fid > 8) {
+    return <NotFoundPage />;
+  }
 
   if (loading || !fid) {
     return <Loading />;

@@ -62,7 +62,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="text-xl">
+        <Link href={"/"} className="text-xl">
           <Image
             className="h-auto"
             src={"/assets/logo.png"}
@@ -70,7 +70,7 @@ export default function Navbar() {
             width={140}
             height={30}
           />
-        </a>
+        </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex">

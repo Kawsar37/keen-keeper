@@ -6,7 +6,7 @@ import { FriendsContext } from "./context/ContextProvider";
 
 export default function Home() {
   const { friendsData, loading } = use(FriendsContext);
-  console.log(friendsData);
+
   return (
     <div className="bg-[#F8FAFC]">
       <div className="container mx-auto px-5 md:px-15 lg:px-30 ">
@@ -24,20 +24,20 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
             <div className="space-y-2 p-8 text-center bg-white rounded-lg ring-1 ring-base-300">
-              <p className="text-3xl font-bold">10</p>
+              <p className="text-3xl font-bold">8</p>
               <p className="text-gray-500">Total Friends</p>
             </div>
             <div className="space-y-2 p-8 text-center bg-white rounded-lg ring-1 ring-base-300">
-              <p className="text-3xl font-bold">10</p>
-              <p className="text-gray-500">Total Friends</p>
+              <p className="text-3xl font-bold">3</p>
+              <p className="text-gray-500">On Track</p>
             </div>
             <div className="space-y-2 p-8 text-center bg-white rounded-lg ring-1 ring-base-300">
-              <p className="text-3xl font-bold">10</p>
-              <p className="text-gray-500">Total Friends</p>
+              <p className="text-3xl font-bold">3</p>
+              <p className="text-gray-500">Need Attention</p>
             </div>
             <div className="space-y-2 p-8 text-center bg-white rounded-lg ring-1 ring-base-300">
-              <p className="text-3xl font-bold">10</p>
-              <p className="text-gray-500">Total Friends</p>
+              <p className="text-3xl font-bold">12</p>
+              <p className="text-gray-500">Interaction This Month</p>
             </div>
           </div>
 

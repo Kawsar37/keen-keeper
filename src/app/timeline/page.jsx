@@ -17,7 +17,7 @@ export default function TimelinePage() {
   }
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="max-w-[85%] mx-auto pt-7 md:pt-10 min-h-[50vh]">
+      <div className="max-w-[85%] mx-auto py-7 md:pt-10 min-h-[50vh]">
         <h1 className="font-bold text-4xl">Timeline</h1>
         <div className="dropdown dropdown-start my-6">
           <div
