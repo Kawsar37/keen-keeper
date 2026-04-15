@@ -23,9 +23,9 @@ export default function TimelinePage() {
           <div
             tabIndex={0}
             role="button"
-            className="btn m-1 text-lg text-gray-500 space-x-25"
+            className="btn m-1 text-lg text-gray-500 w-60 flex justify-between"
           >
-            <p>Filter Timeline</p> <FaAngleDown />
+            <p>Filter by {filterType}</p> <FaAngleDown />
           </div>
           <ul
             tabIndex="-1"
