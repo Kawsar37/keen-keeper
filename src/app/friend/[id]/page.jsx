@@ -37,6 +37,7 @@ export default function FriendDetailsPage({ params }) {
     bio,
     goal,
     next_due_date,
+    email,
   } = friend;
 
   return (
@@ -73,7 +74,7 @@ export default function FriendDetailsPage({ params }) {
 
               <div className="text-xl font-bold text-gray-400">
                 <i>&quot;{bio}&quot;</i>
-                <p className="text-xl font-normal">Preferred: Email</p>
+                <p className="font-normal">Email: {email}</p>
               </div>
             </div>
 

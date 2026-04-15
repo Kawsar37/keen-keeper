@@ -63,7 +63,6 @@ export default function Navbar() {
           </ul>
         </div>
         <a className="text-xl">
-          {" "}
           <Image
             className="h-auto"
             src={"/assets/logo.png"}
