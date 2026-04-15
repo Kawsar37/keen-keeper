@@ -12,7 +12,7 @@ export default function ContextProvider({ children }) {
   console.log("Context page");
 
   useEffect(() => {
-    fetch("http://localhost:3000/data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
         setFriendsData(data);
