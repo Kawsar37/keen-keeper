@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name: KeenKeeper
+
+# Short Description:
+
+KeenKeeper is a modern web application built with Next.js that helps users track and visualize their communication history, including calls, texts and video interactions. It provides an organized timeline view and insightful statistics for better understanding of communication patterns.
+
+# Technologies Used:
+
+Next.js
+Tailwind CSS
+DaisyUI
+React Icons
+Recharts
+
+# Key Features:
+
+1. Timeline Filtering System
+2. Displays call, text and video logs with the ability to filter data by communication type.
+3. Dynamic Routing for Friends
+4. Includes a dynamic route (friend/[id]) to view individual friend-specific interaction details.
+5. Interactive Statistics Dashboard
+6. Visualizes communication data (calls, texts, videos) using charts powered by Recharts.
 
 ## Getting Started
 
