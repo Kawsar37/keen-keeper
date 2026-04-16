@@ -14,6 +14,8 @@ import { toast } from "react-toastify";
 export default function FriendDetailsPage({ params }) {
   const [fid, setId] = useState(null);
 
+  console.log("Dynamic route");
+
   useEffect(() => {
     const getParams = async () => {
       const { id } = await params;

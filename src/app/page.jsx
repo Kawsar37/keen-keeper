@@ -7,6 +7,8 @@ import { FriendsContext } from "./context/ContextProvider";
 export default function Home() {
   const { friendsData, loading } = use(FriendsContext);
 
+  console.log("App Render");
+
   return (
     <div className="bg-[#F8FAFC]">
       <div className="container mx-auto px-5 md:px-15 lg:px-30 ">
