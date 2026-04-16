@@ -1,12 +1,6 @@
-"use client";
-import { use } from "react";
 import Friends from "./components/Friends";
-import Loading from "./components/Loading";
-import { FriendsContext } from "./context/ContextProvider";
 
 export default function Home() {
-  const { friendsData, loading } = use(FriendsContext);
-
   console.log("App Render");
 
   return (
@@ -45,8 +39,7 @@ export default function Home() {
 
           <div className="border-b border-gray-500/20 my-10"></div>
 
-          {loading && <Loading />}
-          <Friends friendsData={friendsData} />
+          <Friends />
         </div>
       </div>
     </div>

@@ -1,8 +1,12 @@
 "use client";
-import React, { use } from "react";
+import React, { useContext } from "react";
 import FriendCard from "./ui/FriendCard";
+import { FriendsContext } from "../context/ContextProvider";
+import Loading from "./Loading";
 
-export default function Friends({ friendsData }) {
+export default function Friends() {
+  const { friendsData, loading } = useContext(FriendsContext);
+  if (loading) return <Loading />;
   return (
     <div>
       <div>
