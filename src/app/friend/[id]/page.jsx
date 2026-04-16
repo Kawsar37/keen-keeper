@@ -3,7 +3,8 @@ import Loading from "@/app/components/Loading";
 import { FriendsContext } from "@/app/context/ContextProvider";
 import NotFoundPage from "@/app/not-found";
 import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import React, { useContext } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { BsChatSquareText } from "react-icons/bs";
 import { IoArchiveOutline, IoVideocamOutline } from "react-icons/io5";
@@ -11,30 +12,19 @@ import { MdDeleteOutline } from "react-icons/md";
 import { PiBellSimpleZBold } from "react-icons/pi";
 import { toast } from "react-toastify";
 
-export default function FriendDetailsPage({ params }) {
-  const [fid, setId] = useState(null);
-
-  console.log("Dynamic route");
-
-  useEffect(() => {
-    const getParams = async () => {
-      const { id } = await params;
-      setId(id);
-    };
-    getParams();
-  }, [params]);
-
+export default function FriendDetailsPage() {
+  const { id } = useParams();
   const { friendsData, loading, timelineData, setTimelineData } =
     useContext(FriendsContext);
 
-  if (fid > 8) {
+  if (!(id > 0 && id < 9)) {
     return <NotFoundPage />;
   }
 
-  if (loading || !fid) {
+  if (loading) {
     return <Loading />;
   }
-  const friend = friendsData.find((friendData) => friendData.id == fid);
+  const friend = friendsData.find((friendData) => friendData.id == id);
   const {
     name,
     picture,

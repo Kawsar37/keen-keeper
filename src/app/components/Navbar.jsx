@@ -103,34 +103,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-{
-  /* <nav className="flex justify-between items-center px-20 py-2">
-  <ul className="text-gray-500 font-semibold flex items-center gap-4">
-    <li>
-      <button
-        className="flex gap-1 items-center"
-        
-      >
-        <IoHomeOutline /> Home
-      </button>
-    </li>
-    <li>
-      <button
-        className="flex gap-1 items-center"
-        onClick={() => setActiveBtn("timeline")}
-      >
-        <CiClock2 /> Timeline
-      </button>
-    </li>
-    <li>
-      <button
-        className="flex gap-1 items-center"
-        onClick={() => setActiveBtn("stats")}
-      >
-        <TfiStatsUp /> Stats
-      </button>
-    </li>
-  </ul>
-</nav>; */
-}

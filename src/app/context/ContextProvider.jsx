@@ -12,6 +12,7 @@ export default function ContextProvider({ children }) {
   console.log("Context page");
 
   useEffect(() => {
+    console.log("Data fetching");
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
