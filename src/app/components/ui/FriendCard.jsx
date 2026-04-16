@@ -6,7 +6,7 @@ export default function FriendCard({ friend }) {
   const { id, name, picture, days_since_contact, status, tags } = friend;
   return (
     <Link href={`/friend/${id}`}>
-      <div className="bg-white rounded-xl text-center ring-1 ring-gray-300/30 flex flex-col gap-2 items-center p-6">
+      <div className="bg-white rounded-xl text-center ring-1 ring-gray-300/30 flex flex-col gap-2 items-center p-6 h-full">
         <Image
           src={picture}
           alt="friend picture"
@@ -29,7 +29,7 @@ export default function FriendCard({ friend }) {
         </div>
 
         <div
-          className={`text-white p-2 rounded-full font-semibold flex items-center justify-center ${status == "overdue" ? "bg-[#EF4444]" : status == "almost due" ? "bg-[#EFAD44]" : "p-btn"}`}
+          className={`text-white p-2 rounded-full font-semibold flex items-center justify-center mt-auto ${status == "overdue" ? "bg-[#EF4444]" : status == "almost due" ? "bg-[#EFAD44]" : "p-btn"}`}
         >
           {status}
         </div>
