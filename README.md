@@ -6,10 +6,10 @@ KeenKeeper is a modern web application built with Next.js that helps users track
 
 # Technologies Used:
 
-Next.js
-Tailwind CSS
-DaisyUI
-React Icons
+Next.js,
+Tailwind CSS,
+DaisyUI,
+React Icons,
 Recharts
 
 # Key Features:
